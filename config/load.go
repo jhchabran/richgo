@@ -16,7 +16,8 @@ const (
 	Filename = ".richstyle"
 	// LocalOnlyEnvName is the name of environment variable
 	// to stop searching configuration files excepting current directory.
-	LocalOnlyEnvName = "RICHGO_LOCAL"
+	LocalOnlyEnvName       = "RICHGO_LOCAL"
+	ForceConfigPathEnvName = "RICHGO_FORCE_CONFIG_PATH"
 )
 
 var (
@@ -67,7 +68,12 @@ func load(path string) ([]byte, error) {
 
 // Load configurations from file
 func Load() {
-	paths := loadableSources()
+	var paths []string
+	if forceConfigPath := os.Getenv(ForceConfigPathEnvName); forceConfigPath != "" {
+		paths = []string{forceConfigPath}
+	} else {
+		paths = loadableSources()
+	}
 	c := &defaultConfig
 	for _, p := range paths {
 		data, err := load(p)
