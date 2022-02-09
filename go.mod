@@ -1,4 +1,4 @@
-module github.com/kyoh86/richgo
+module github.com/jhchabran/richgo
 
 require (
 	github.com/kyoh86/xdg v1.2.0

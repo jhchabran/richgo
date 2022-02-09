@@ -3,7 +3,7 @@ package test
 import (
 	"strings"
 
-	"github.com/kyoh86/richgo/config"
+	"github.com/jhchabran/richgo/config"
 )
 
 type labelSet struct {

@@ -6,9 +6,9 @@ import (
 	"os/exec"
 	"syscall"
 
-	"github.com/kyoh86/richgo/config"
-	"github.com/kyoh86/richgo/editor"
-	"github.com/kyoh86/richgo/editor/test"
+	"github.com/jhchabran/richgo/config"
+	"github.com/jhchabran/richgo/editor"
+	"github.com/jhchabran/richgo/editor/test"
 )
 
 const testFilterCmd = "testfilter"
