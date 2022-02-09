@@ -214,6 +214,9 @@ func (e *test) Edit(line string) (string, error) {
 					if s == "" {
 						return ""
 					}
+					if config.C.AnyStyle != nil {
+						return config.C.AnyStyle.Apply(labels().Anonym() + s)
+					}
 					return e.prevLineStyle.Apply(labels().Anonym() + s)
 				},
 			},

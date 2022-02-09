@@ -11,6 +11,7 @@ type Config struct {
 	SkipStyle  *Style `json:"skipStyle,omitempty" yaml:"skipStyle,omitempty"`
 	FileStyle  *Style `json:"fileStyle,omitempty" yaml:"fileStyle,omitempty"`
 	LineStyle  *Style `json:"lineStyle,omitempty" yaml:"lineStyle,omitempty"`
+	AnyStyle   *Style `json:"anyStyle,omitempty" yaml:"anyStyle,omitempty"`
 
 	PassPackageStyle *Style `json:"passPackageStyle,omitempty" yaml:"passPackageStyle,omitempty"`
 	FailPackageStyle *Style `json:"failPackageStyle,omitempty" yaml:"failPackageStyle,omitempty"`
